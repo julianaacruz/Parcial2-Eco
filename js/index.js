@@ -4,7 +4,7 @@ const movieContainer = document.getElementById('movieContainer');
 const sendScoreBtn = document.getElementById('sendScoreBtn');
 
 let arrayMovies=[];
-let j;
+let j=0;
 
 /* --------------Enviar peliculas a base de datos
 
@@ -41,6 +41,7 @@ database.ref('peliculas').on('value', function(data) {
 
 });
 
+
 vote = () => { 
     if (
         arrayMovies[0].stars == null ||
@@ -51,14 +52,14 @@ vote = () => {
       ) {
       
         alert("Debe votar por todas las peliculas");
-    }
+    } else {
 
     j++;
+    console.log('j='+j);
 
     for (let i = 0; i < arrayMovies.length; i++) {
-    let vote = parseInt(arrayMovies[i].stars);
-    let currentScore = parseInt(arrayMovies[i].score);
-    let newScore= (currentScore*(j-1)+vote/j); //promedio
+    let newScore= (parseInt(arrayMovies[i].score)*(j-1)+parseInt(arrayMovies[i].stars)/(j)); //promedio
+
 
     let update ={
         name:arrayMovies[i].name,
@@ -67,8 +68,8 @@ vote = () => {
     database.ref('peliculas/'+arrayMovies[i].name).set(update);
 
     }
-
-
+    alert("updated");
+    }
 
 }
 

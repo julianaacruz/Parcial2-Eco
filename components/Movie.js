@@ -44,9 +44,8 @@ class Movie{
 
 				
             star.addEventListener('click', ()=>{
-                this.score=star.value;
-                showValue.innerHTML = i;
                 this.stars=star.value;
+                showValue.innerHTML = i + "/5";
 
             });
 
