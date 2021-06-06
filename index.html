@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parcial 2</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+
+    <body>
+        <div id="headerContainer">
+        <img id="logo" src="img/logo.png" alt="logo">
+        <h4 id="subtitle">Escoge tu película favorita</h4>
+        </div>
+
+        <div id="scoreContainer">
+            <div id="movieContainer"></div>
+            <button id="sendScoreBtn">Enviar</button>
+          </div>
+
+    </body>
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDLg8S-DVzYBXu-GVF0_aMWhq4V4CvzN7o",
+      authDomain: "parcial-2-eco.firebaseapp.com",
+      databaseURL: "https://parcial-2-eco-default-rtdb.firebaseio.com",
+      projectId: "parcial-2-eco",
+      storageBucket: "parcial-2-eco.appspot.com",
+      messagingSenderId: "13273967626",
+      appId: "1:13273967626:web:86390e94f91039be9803f3"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+<script src="components/Movie.js"></script>
+<script src="js/index.js"></script>

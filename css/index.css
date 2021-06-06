@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+body{background-color: #0c0c0c;}
+
+h4 {
+    font-family: "Roboto", sans-serif;
+    color: #dddddd;
+    font-weight: 600;
+    margin: 20px;
+    font-size: medium;
+  }
+
+  h3 {
+    font-family: "Roboto", sans-serif;
+    color: #dddddd;
+    font-weight: 100;
+    margin: 20px;
+    font-size: small;
+    text-align: left;
+  }
+
+#headerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+}
+
+#logo{
+    width:20em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#scoreContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+}
+
+#movieContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin:0 auto;
+}
+
+#sendScoreBtn{
+    margin: 1em;
+    padding: 1em;
+    background-color: #dddddd; 
+    border: none;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    color: #1d2033;
+    width: 100px;
+
+}
+
+.filaPelicula{
+    background-color: #1d2033;
+    margin: 10px;
+    width: 100%;
+    padding: 0.8em;
+    border-radius: 5px;
+}
+
+.nombrePelicula{
+    font-family: "Roboto", sans-serif;
+    color: #dddddd;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.scorePelicula{
+    font-family: "Roboto", sans-serif;
+    color: #dddddd;
+    font-weight: 100;
+    font-size:xx-large;
+    text-align: right;
+}
+
+/*styling star rating*/
+
+
+
+.rating{
+	border: none;
+	float: left;
+}
+
+.star > input{
+	display: none;
+}
+
+.rating > label:before{
+	content: '\f005'; /* se supone que esta era la estrella :c */
+	font-family: FontAwesome;
+	margin: 5px;
+	font-size: 1.5rem;
+	display: inline-block;
+	cursor: pointer;
+}
+
